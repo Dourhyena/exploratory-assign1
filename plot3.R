@@ -1,3 +1,6 @@
+## Creating a png file
+png("plot3.png")
+
 ##Reading, formatting and subsetting data
 ele = read.table(file = "ele.txt", header = TRUE, sep = ";")
 ele[,1] = as.Date(ele[,1], format = "%d/%m/%Y")
@@ -22,3 +25,6 @@ with(data1, lines(Time, as.numeric(Sub_metering_3), col = "blue"))
 
 ## Annotating and specifying legend
 legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+
+## Finish writing to png
+dev.off()

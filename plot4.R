@@ -1,3 +1,7 @@
+## Creating a png file
+png("plot4.png")
+
+
 ##Plotting the data with annotations
 
 ele = read.table(file = "ele.txt", header = TRUE, sep = ";")
@@ -31,3 +35,6 @@ with(data1, {
         ##Plot4
         plot(data1$Time, data1$Global_reactive_power, type = "l", xlab = "datetime", ylab = "Global_reactive_power")
 })
+
+## Finish writing to png
+dev.off()
